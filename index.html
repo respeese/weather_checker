@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+    <h1>Check the weather!</h1>
+    <div id='search_bar'>
+        <form id='location_form'>
+            <input id='location_search' type='text'>
+            <button id='search_btn'><i class="fas fa-search"></i></button>
+            <br>
+            <button id='f_degrees_btn'>F</button>
+            <button id='c_degrees_btn'>C</button>
+        </form>
+
+    </div>
+    <div id='progress_bar'>Fetching data...</div>
+    <div id='weather_data'>
+        <span>Location</span>
+        <p>Data...</p>
+    </div>
+</body>
+
+<script src='script.js'></script>
+</html>
