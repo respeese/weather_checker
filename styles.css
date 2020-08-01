@@ -1,0 +1,8 @@
+.hidden {
+    visibility: hidden;
+}
+
+#weather_data {
+    border: 1px solid black;
+    text-align: center;
+}
