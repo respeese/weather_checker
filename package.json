@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/respeese/weather_app.git"
+    "url": "git+https://github.com/respeese/weather_checker.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/respeese/weather_app/issues"
+    "url": "https://github.com/respeese/weather_checker/issues"
   },
-  "homepage": "https://github.com/respeese/weather_app#readme"
+  "homepage": "https://github.com/respeese/weather_checker#readme"
 }
