@@ -12,29 +12,28 @@ searchBtn.addEventListener('click', ()=> {
 
 
 async function sendData() {
-    let data = 0;
-    let networkError = false;
     const city = document.querySelector('#location_search').value;
     
     toggleProgress();
     
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=11796d1ae97d0844c7a9303520c0a898`, { mode:'cors' }).catch(err => {
-            console.log(err);
-            networkError = true;
-        });
-
-    await moveProgress();
-
-    if(networkError == false) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=11796d1ae97d0844c7a9303520c0a898`, { mode:'cors' })
+    .then(response => {
         if (response.status > 200) {
-                throw new Error('City not found');
-            } else if (response.status == 200) {
-                data =  await response.json();
-            }
+            throw new Error('City not found');
+        } else if (response.status == 200) {
+            return response.json();
+        }
+    })
+    .then(async (data) => {
+        await moveProgress();
         toggleProgress();
         toggleWeather();
         displayWeather(data);
-    }  
+    })
+    .catch(async (err) => {
+        await moveProgress();
+        alert(err);
+    });
 }
 
 

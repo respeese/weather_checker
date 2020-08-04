@@ -27,6 +27,8 @@ async function moveProgress() {
             return await new Promise(resolve => setTimeout(resolve, ms));
         } 
     }
+
+    return Promise.resolve(1)
 }
 
 function toggleProgress() {
