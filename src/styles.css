@@ -17,3 +17,46 @@
     width: 100%;
     background-color: #ddd;
 }
+
+/*backgrounds that change depending on the weather*/
+
+/*Thunderstorm, Rain or drizzle, Snow, Clouds, Clear, Other (might change for each type - 10 special types)*/
+
+.clouds {
+    background-image: url('./images/clouds.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.clear {
+    background-image: url('./images/clear.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.thunder {
+    background-image: url('./images/lightning.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.rain_drizzle {
+    background-image: url('./images/rain.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.snow {
+    background-image: url('./images/snow.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.other {
+    background-color: rgb(84, 51, 201);
+}

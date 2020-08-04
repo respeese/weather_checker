@@ -1,5 +1,6 @@
 import {moveProgress, toggleProgress} from './progress'
 import {toggleWeather, displayWeather} from './weather'
+import {toggleBackground} from './background'
 
 //  https://openweathermap.org/weather-conditions - main weather descriptions, use for background changes
 const searchBtn = document.querySelector('#search_btn');
@@ -27,6 +28,7 @@ async function sendData() {
     .then(async (data) => {
         await moveProgress();
         toggleProgress();
+        toggleBackground(data);
         toggleWeather();
         displayWeather(data);
     })
