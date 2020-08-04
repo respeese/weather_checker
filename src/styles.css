@@ -6,3 +6,14 @@
     border: 1px solid black;
     text-align: center;
 }
+
+#progress_color {
+    width: 1%;
+    height: 30px;
+    background-color: #4CAF50;
+}
+
+#progress_bar {
+    width: 100%;
+    background-color: #ddd;
+}
