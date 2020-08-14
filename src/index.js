@@ -2,7 +2,6 @@ import {moveProgress, toggleProgress} from './progress'
 import {toggleWeather, displayWeather} from './weather'
 import {toggleBackground} from './background'
 
-//  https://openweathermap.org/weather-conditions - main weather descriptions, use for background changes
 const searchBtn = document.querySelector('#search_btn');
 
 searchBtn.addEventListener('click', ()=> {

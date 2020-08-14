@@ -4,25 +4,28 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="../src/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Check the weather!</h1>
-    <div id='search_bar'>
-        <form id='location_form'>
-            <input id='location_search' type='text'>
-            <button id='search_btn'><i class="fas fa-search"></i></button>
-            <br>
-            <button id='f_degrees_btn'>F</button>
-            <button id='c_degrees_btn'>C</button>
-        </form>
+    <div id='container'>
+        <h1>Check the weather!</h1>
+        <div id='search_bar'>
+            <form id='location_form'>
+                <input id='location_search' type='text'>
+                <button id='search_btn'><i class="fas fa-search"></i></button>
+                <br>
+                <button id='f_degrees_btn'>F</button>
+                <button id='c_degrees_btn'>C</button>
+            </form>
+        </div>
 
-    </div>
-    <div id='progress_bar' class='hidden'>
-        <div id='progress_color'></div>
-    </div>
-    <div id='weather_data' class='hidden'>
-        <hr>
+        <div id='progress_bar' class='hidden'>
+            <div id='progress_color'></div>
+        </div>
+
+        <div id='weather_data' class='hidden weather_data_border'></div>
+        </div>
     </div>
 </body>
 

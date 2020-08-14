@@ -1,13 +1,18 @@
 const weatherBox = document.querySelector('#weather_data');
 const searchBox = document.querySelector('#search_bar');
+const title = document.querySelector('h1');
 
 function toggleWeather() {
     if (weatherBox.classList.contains('hidden')) {
         weatherBox.classList.remove('hidden');
+        weatherBox.classList.add('weather_data_border');
+        title.classList.add('weather_data_border');
         searchBox.classList.add('hidden');
     }
     else {
         weatherBox.classList.add('hidden');
+        weatherBox.classList.remove('weather_data_border');
+        title.classList.remove('weather_data_border');
         searchBox.classList.remove('hidden');
     }
 }
