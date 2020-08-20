@@ -18,7 +18,7 @@ function toggleWeather() {
 }
 
 
-function displayWeather(data) {
+function displayWeather(data, units) {
     let line = document.querySelector('hr');
     let name = document.createElement('h2');
     let desc = document.createElement('p');
@@ -26,10 +26,20 @@ function displayWeather(data) {
     let humidity = document.createElement('p');
     let elements = [desc, temp, humidity];
 
-    name.innerHTML = data.name;
+    console.log(units)
+    name.innerHTML = data.name + ', ' + data.sys.country;
     desc.innerHTML = data.weather[0].main + ' - ' + data.weather[0].description;
-    temp.innerHTML = 'Temp: ' + data.main.temp;
-    humidity.innerHTML = 'Humidity: ' + data.main.humidity;
+    temp.innerHTML = 'Temperature: ' + data.main.temp;
+
+    if(units == 'imperial') {
+        temp.innerHTML += ' Fahrenheit';
+    }
+
+    if(units == 'metric') {
+        temp.innerHTML += ' Celsius';
+    }
+
+    humidity.innerHTML = 'Humidity: ' + data.main.humidity + '%';
 
     weatherBox.insertBefore(name, line);
     elements.forEach(el => {
