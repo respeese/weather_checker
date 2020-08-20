@@ -28,7 +28,7 @@ function displayWeather(data, units) {
 
     console.log(units)
     name.innerHTML = data.name + ', ' + data.sys.country;
-    desc.innerHTML = data.weather[0].main + ' - ' + data.weather[0].description;
+    desc.innerHTML = data.weather[0].description;
     temp.innerHTML = 'Temperature: ' + data.main.temp;
 
     if(units == 'imperial') {
